@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#searchTxt{
+    width: 50%; 
+    height: 45px; 
+    background-color: rgb(243, 243, 243); 
+    border: none;
+    border-top-right-radius: 10px; 
+    border-bottom-right-radius: 10px; 
+    border-top-left-radius: 0px; 
+    border-bottom-left-radius: 0px;
+}
+
+#notes-container{
+    width: 100%; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    flex-direction: column;
+}
+
+.btn-container{
+    display: none; 
+    width: 60%; 
+    justify-content: flex-start; 
+    align-items: center; 
+    margin: 1vh 0vh;
+}
+
+#notes{
+    width: 90%;
+    margin: auto;
+}
+
+#pin-notes{
+    width: 90%;
+    margin: auto;
+}
+
+#archive-notes{
+    width: 90%;
+    margin: auto;
+}
+
+#trash-notes{
+    width: 90%;
+    margin: auto;
+}
+
+#searchIcon{
+    display: flex;
+    background-color: rgb(243, 243, 243); 
+    height: 45px; 
+    margin-left: 11vh;
+    justify-content: center; 
+    align-items: center; 
+    border-top-left-radius: 10px; 
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 0px; 
+    border-bottom-right-radius: 0px;
+}
+
+#searchTxt:focus{
+    background-color: rgb(243, 243, 243);
+    box-shadow: none;
+    /* box-shadow: none|h-offset v-offset blur spread color |inset|initial|inherit; */
+}
+
+#addTitle:focus{
+    box-shadow: none;
+}
+
+#addTxt:focus{
+    outline: none;
+}
+
+#addBtn:focus{
+    box-shadow: none;
+}
+
+#clearBtn:focus{
+    box-shadow: none;
+}
+
+#delete:focus{
+    box-shadow: none;
+}
+
+#heading{
+    width: 90%;
+    height: .9000rem;
+    margin: auto;
+    display: flex;
+    /* border: 1px solid blue; */
+}
+
+#heading1{
+    width: 90%;
+    height: .9000rem;
+    margin: auto;
+    display: flex;
+    /* border: 1px solid blue; */
+}
+
+#heading p{
+    color: #5f6368;
+    letter-spacing: .07272727em;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: .9000rem;
+    font-weight: 500;
+    line-height: 1rem;
+    text-transform: uppercase;
+}
+
+#heading1 p{
+    color: #5f6368;
+    letter-spacing: .07272727em;
+    font-family: Roboto,Arial,sans-serif;
+    font-size: .9000rem;
+    font-weight: 500;
+    line-height: 1rem;
+    text-transform: uppercase;
+}
+
+.hamburger{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    padding: 6px;
+    cursor: pointer;
+}
+
+.hamburger:hover{
+    background-color: rgb(236, 236, 236);
+}
+
+.menu{
+    height: 95vh;
+    left: 16px;
+    background-color: #fff;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    box-shadow: none;
+    transition: 0.5s none;
+}
+
+.menu-ul{
+    margin-top: 1vh;
+}
+
+.list-elem{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-radius: 50px;
+    /* border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px; */
+    font-size: 15px;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 0px;
+    cursor: pointer;
+}
+
+.list-elem:hover{
+    background-color: rgb(240, 240, 240);
+}
+
+.active{
+    background-color: #feefc3;
+}
+
+.active:hover{
+    background-color: #feefc3;
+}
+
+.list-elem img{
+    margin-left: 13px;
+    margin-right: 13px;
+}
+
+#edit-note-container{
+    width: 100%;
+    height: 100%;
+    background-color: #0000006b;
+    position: fixed;
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+#edit-note-form{
+    width: 80%;
+    max-width: 600px;
+    min-width: 311px;
+    background-color: #fff;
+    border-radius: 8px;
+    border: none;
+    /* margin-top: 6vh; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#edit-note-title-input{
+    border: none; color: black;
+    font-family: 'Google Sans',Roboto,Arial,sans-serif; width: 99%; margin-top: 2px;
+    font-size: 1.375rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    line-height: 1.75rem;
+    padding-top: 16px; 
+    outline: none;
+}
+
+#edit-note-text-input{
+    border: none;
+    color: black;
+    padding: 5px 12px; 
+    height: auto;
+    max-height: 600px;
+    resize: none; 
+    letter-spacing: .00625em; 
+    line-height: 1.5rem;
+    outline: none; 
+    width: 99%;
+    font-family: Roboto,Arial,sans-serif; 
+    font-size: 1rem; 
+    font-weight: 400; 
+}
+
+#edit-note-text-input::-webkit-scrollbar{
+    width: 0px;
+}
+
+.btn-box{
+    width: 99%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 5px 0px;
+    /* border: 1px solid blue; */
+}
+
+.btn-box button{
+    border-radius: 5px;
+    padding: 5px 20px;
+    border: none;
+    color: rgb(65, 65, 65);
+    background-color: #fff;
+    margin-right: 15px;
+}
+
+.btn-box button:hover{
+    color: rgb(65, 65, 65);
+    background-color: rgb(243, 243, 243);
+}
+
+#addTitle{
+    display: none; 
+    width: 60%; 
+    height: 45px; 
+    background-color: rgb(243, 243, 243); 
+    border: none; 
+    max-height: 250px;
+    border-top-right-radius: 10px; 
+    border-top-left-radius: 10px; 
+    border-bottom-right-radius: 0px; 
+    border-bottom-left-radius: 0px; 
+    font-family: Roboto,Arial,sans-serif; 
+    font-size: 1rem;
+    font-weight: 400;
+    outline: none;
+}
+
+#addTxt{
+    width: 60%;
+    height: 45px;
+    max-height: 250px;
+    letter-spacing: .00625em; 
+    line-height: 1.5rem;
+    background-color: rgb(243, 243, 243); 
+    border: none;
+    resize: none;
+    font-family: Roboto,Arial,sans-serif;
+    padding: 11px 12px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    font-size: 1rem;
+}
+
+#addTxt::-webkit-scrollbar{
+    width: 0px;
+}
+
+#save:focus{
+    box-shadow: none;
+}
+
+#note-card{
+    width: 300px;
+    border: 1px solid rgb(202, 202, 202);
+}

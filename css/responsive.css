@@ -1,0 +1,290 @@
+
+@media screen and (max-width: 1280px){
+    #note-card{
+        width: 260px;
+    }
+}
+
+@media screen and (max-width: 1024px){
+    #note-card{
+        width: 280px;
+    }
+}
+
+@media screen and (max-width: 769px){
+
+    #searchIcon{
+        margin-left: 35px;
+    }
+
+    #notes{
+        width: 85%;
+    }
+
+    #pin-notes{
+        width: 85%;
+    }
+
+    #archive-notes{
+        width: 85%;
+    }
+
+    #trash-notes{
+        width: 85%;
+    }
+
+    #heading{
+        width: 85%;
+    }
+
+    #heading1{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width: 541px){
+    #searchIcon{
+        margin-left: 20px;
+    }
+
+    #addTitle{
+        width: 78%;
+        margin-left: 10px;
+    }
+
+    #addTxt{
+        width: 78%;
+        margin-left: 10px;
+    }
+
+    #btn-container{
+        width: 75%;
+    }
+
+    #note-card{
+        width: 400px;
+    }
+
+    #notes{
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    #pin-notes{
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    #archive-notes{
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    #trash-notes{
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    #heading{
+        display: flex;
+        width: 80%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #heading p{
+        margin-bottom: 0px;
+    }
+
+    #heading1{
+        display: flex;
+        width: 80%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #heading1 p{
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 415px) {
+    #notes-container{
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    #addTitle{
+        width: 74%;
+        margin-right: 25px;
+    }
+
+    #addTxt{
+        width: 74%;
+        margin-right: 25px;
+    }
+
+    #btn-container{
+        width: 80%;
+    }
+
+    #notes{
+        display: flex;
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    #note-card{
+        width: 280px;
+    }
+
+    #pin-notes{
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+        margin: 0;
+        width: 90%;
+    }
+
+    #notes{
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+        margin: 0;
+        width: 90%;
+    }
+
+    #archive-notes{
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+        margin: 0;
+        width: 90%;
+    }
+
+    #trash-notes{
+        display: flex;
+        justify-content: flex-end;
+        padding: 0;
+        margin: 0;
+        width: 90%;
+    }
+
+    #go{
+        display: none;
+    }
+
+    #keep{
+        display: none;
+    }
+
+    #heading{
+        width: 70%;
+    }
+
+    #heading1{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 412px){
+    #heading{
+        width: 70%;
+    }
+
+    #heading1{
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 376px) {
+    #heading{
+        width: 73%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #heading1{
+        width: 73%;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    #notes-container{
+        justify-content: flex-end; 
+        align-items: flex-end;
+    }
+
+    #btn-container{
+        width: 80%;
+    }
+
+    #addTitle{
+        width: 76%;
+        margin-right: 15px;
+    }
+
+    #addTxt{
+        width: 76%;
+        margin-right: 15px;
+    }
+
+    #searchIcon{
+        display: none;
+    }
+
+    #searchTxt{
+        width: 90%;
+        border-top-right-radius: 10px; 
+        border-bottom-right-radius: 10px; 
+        border-top-left-radius: 10px; 
+        border-bottom-left-radius: 10px;
+        margin-left: 5px;
+    }
+
+    #pin-notes{
+        width: 93%;
+        margin: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    #notes{
+        width: 93%;
+        margin: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    #archive-notes{
+        width: 93%;
+        margin: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+
+    #trash-notes{
+        width: 93%;
+        margin: auto;
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+}
+
+@media screen and (max-width: 361px){
+    #note-card{
+        width: 270px;
+    }
+}
+
+@media screen and (max-width: 321px){
+    #note-card{
+        width: 235px;
+    }
+}

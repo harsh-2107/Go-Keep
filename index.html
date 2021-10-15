@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="description" content="Quickly capture what's on your mind which will be safely stored and only the author can access the notes.">
+    <meta name="keywords" content="notes app, minimal look, responsive design">
+    <meta name="robots" content="INDEX, FOLLOW">
+    <title>Go Keep</title>
+    <link rel="icon" sizes="128x128" href="img/logo.png">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-light" style="border-bottom: 1px solid rgb(197, 197, 197); position: sticky; background-color: #fff;
+    z-index: 1; top: 0; width: 100%; height: 65px;">
+        <div class="container-fluid full" style="width: 100%; padding-left: 0;">
+            <form class="d-flex" style="width: 100%; align-items: center;">
+                <div class="hamburger" onclick="hamburger()">
+                    <img src="img/menu.png" style="width: 18px; margin: 10px;">
+                </div>
+                <div id="mylogo" style="display: flex; justify-content: center; align-items: center; margin-left: 1vh;">
+                    <img src="img/logo.png" style="height: 42px;">
+                    <a id="go"
+                        style="font-family: 'Product Sans',Arial,sans-serif; font-size: 26px; font-weight: 500; cursor: pointer;">Go</a>
+                    <a id="keep"
+                    style="font-family: 'Product Sans',Arial,sans-serif; font-size: 22px; cursor: pointer;">Keep</a>
+                </div>
+                <div class="s-img" id="searchIcon">
+                    <img src="img/search.png" style="width: 18px; margin-left: 20px; margin-right: 15px;">
+                </div>
+
+                <input class="form-control me-2" id="searchTxt" type="search" placeholder="Search a note" aria-label="Search">
+            </form>
+        </div>
+    </nav>
+
+    <div class="menu" id="menu">
+        <div class="menu-ul">
+            <div class="list-elem active" id="list-elem1" style="padding-right: 0px;" onclick="clickOne()">
+                <img src="img/idea (2).png" id="img1"
+                    style="width: 22px; margin-top: 3px; margin-bottom: 3px; margin-left: 13px; margin-right: 13px;">
+                <a id="op1" style="display: none;">Notes</a>
+            </div>
+            <div class="list-elem" id="list-elem2" style="padding-right: 0px;" onclick="clickTwo()">
+                <img src="img/archive.png" id="img2"
+                    style="width: 22px; margin-top: 3px; margin-bottom: 3px; margin-left: 13px; margin-right: 13px;">
+                <a id="op2" style="display: none;">Archive</a>
+            </div>
+            <div class="list-elem" id="list-elem3" style="padding-right: 0px;" onclick="clickThree()">
+                <img src="img/trash.png" id="img3"
+                    style="width: 22px; margin-top: 3px; margin-bottom: 3px;  margin-left: 13px; margin-right: 13px;">
+                <a id="op3" style="display: none;">Trash</a>
+            </div>
+        </div>
+    </div>
+
+    <div id="edit-note-container">
+        <div id="edit-note-form">
+            <input class="form-control me-2" id="edit-note-title-input" type="text" placeholder="Title">
+            <textarea placeholder="Note" id="edit-note-text-input"></textarea>
+            <div class="btn-box">
+                <button class="btn" id="save">Save</button>
+                <button class="btn" id="close">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <section id="section-notes">
+        <div class="container my-3" id="notes-container">
+            <input class="form-control" aria-describedby="title" placeholder="Title" id="addTitle">
+            <textarea placeholder="Take a note.." id="addTxt"></textarea>
+            <div class="btn-container" id="btn-container">
+                <button class="btn btn-warning" id="addBtn"
+                    style="margin-right: 1vh; border-radius: 5px; color: #fff;">Add Note</button>
+                <button class="btn btn-warning" id="clearBtn" style="border-radius: 5px; color: #fff;">Close</button>
+            </div>
+        </div>
+
+        <div id="heading">
+            <p class="mx-4">PINNED</p>
+        </div>
+
+        <div id="pin-notes" class="row container-fluid my-2">
+        </div>
+
+        <div id="heading1">
+            <p class="mx-4">OTHERS</p>
+        </div>
+
+        <div id="notes" class="row container-fluid my-2"></div>
+    </section>
+
+    <section id="section-archive" style="display: none;">
+        <div id="archive-notes" class="row container-fluid my-2"></div>
+    </section>
+
+    <section id="section-trash" style="display: none;">
+        <div id="trash-notes" class="row container-fluid my-2"></div>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="js/app.js"></script>
+    <script src="js/style.js"></script>
+</body>
+
+</html>
